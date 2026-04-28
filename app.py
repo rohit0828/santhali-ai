@@ -87,7 +87,7 @@ def start_new_chat():
 
 #streamlit interface
 
-st.set_page_config(page_title="Santali AI Assistant", page_icon="🤖")
+st.set_page_config(page_title="Santhali AI Assistant", page_icon="🤖")
 #css
 st.markdown("""
 <style>
@@ -172,7 +172,7 @@ with st.sidebar:
     
     if len(st.session_state.messages) > 0:
         st.write("Save this conversation:")
-        chat_text = "--- Santali AI Chat History ---\n\n"
+        chat_text = "--- Santhali AI Chat History ---\n\n"
         for msg in st.session_state.messages:
             role = "You" if msg["role"] == "user" else "AI"
             chat_text += f"{role}: {msg['content']}\n"
@@ -185,15 +185,15 @@ with st.sidebar:
         st.download_button(
             label="📥 Download Current Chat",
             data=chat_text,
-            file_name="santali_conversation.txt",
+            file_name="santhali_conversation.txt",
             mime="text/plain",
             use_container_width=True
         )
 
 
 #main chat interface
-st.title("Santali AI Assistant 🤖")
-st.markdown("Ask me anything! Type in Santali or English.")
+st.title("Santhali AI Assistant 🤖")
+st.markdown("Ask me anything! Type in Santhali or English.")
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
